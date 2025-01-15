@@ -6,3 +6,4 @@ Este es mi primer repo para JavaScript
 - ´git commit -m "el mensaje que quieras"´ para hacer commit de los cambios
 - ´git push´ para subir los cambios
 
+    
