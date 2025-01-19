@@ -1,8 +1,8 @@
 var vida, ataque, pocion;
-var Pocion = 0
-var colaFenix = 1
-var pocionquemaduras = 2
-var Veneno = 3
+var Pocion = 0;
+var colaFenix = 1;
+var pocionquemaduras = 2;
+var Veneno = 3;
 var nombre, textoBienvenide;
 var numero_1, numero_2, resultado;
 var turno = 1;
@@ -65,11 +65,11 @@ function suma(num1, num2) {
 function JuegaTurno() {
   var jugadaCPU = Math.floor(Math.random() * 4);
 
-  if(vida <= 0){
+  if (vida <= 0) {
     vivo = false;
   }
 
-  if(vida <= 0){
+  if (vida <= 0) {
     vivo = false;
   }
 
@@ -97,50 +97,40 @@ function JuegaTurno() {
 }
 
 function muestraEstadoJugador() {
-  if(vivo == true){
+  if (vivo == true) {
     console.log("Vida: " + vida);
-    if(envenenado == true) 
-      console.log("Usted esta envenenado");
-    if(quemado == true)
-      console.log("Usted esta quemado");
+    if (envenenado == true) console.log("Usted esta envenenado");
+    if (quemado == true) console.log("Usted esta quemado");
   } else {
     console.log("Game Over");
   }
 }
 function usarItem(objeto) {
-
-if(objeto == pocion){
-  vida += 50;
-}
-if(objeto == colaFenix){
-  if(vivo == false) {
-    vivo = true;
-    vida = 30;
-  } else {
-    console.log("No puedes usar este item");
+  if (objeto == pocion) {
+    vida += 50;
   }
-}
-if(objeto == pocionquemaduras){
-  if(quemado == true)
-    quemado = false;
-
-  else {
-   console.log("No puedes usar este item");
+  if (objeto == colaFenix) {
+    if (vivo == false) {
+      vivo = true;
+      vida = 30;
+    } else {
+      console.log("No puedes usar este item");
+    }
   }
-}
-if(objeto == Veneno){
-  if (envenenado == true)
-  envenenado = false;
-  else {
-    console.log("No puedes usar este item");
+  if (objeto == pocionquemaduras) {
+    if (quemado == true) quemado = false;
+    else {
+      console.log("No puedes usar este item");
+    }
   }
-
-}
+  if (objeto == Veneno) {
+    if (envenenado == true) envenenado = false;
+    else {
+      console.log("No puedes usar este item");
+    }
+  }
 
   muestraEstadoJugador();
 
-
-
-        console.log(textoBienvenide + " " + nombre);
+  console.log(textoBienvenide + " " + nombre);
 }
-  
